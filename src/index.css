@@ -46,3 +46,8 @@ code {
   width: 100px;
   
  */
+
+.center {
+  text-align: center;
+  margin: 20px 0;
+}
