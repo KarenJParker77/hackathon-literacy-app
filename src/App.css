@@ -1,44 +1,234 @@
-.App {
-  text-align: center;
+@import url("https://use.typekit.net/rfb5wid.css");
+
+body{
+  background-color: #F5F5F5;
+  color:#262626;
+  font-family: new-hero, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:14px;
 }
 
-.App-logo {
-  height: 40vmin;
+.container{
+  width:1000px;
+}
+
+button.answerBtn{
+  background-color:#F87FB6 !important;
+  border:none !important;
+  box-shadow:0px 0px 5px rgba(0,0,0,.2);
+  color:white;
+  font-weight:700;
+  font-size:30px;
+  padding:5px 10px;
+  line-height:30px;
+  text-align:center !important;
+  font-size:700;
+  transition:.3s;
+  height:200px !important;
+  border-radius:20px;
+}
+
+button.answerBtn:hover{
+  background-color: #EAC435 !important;
+  color:#F87FB6;
+  transform:scale(1.1);
+}
+
+
+
+button.answerBtn:disabled {
+  background-color:#F25F5C !important;
+  color:white  !important;
+  transform:scale(.7)  !important;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button.answerBtn.true:disabled {
+  background-color:green !important;
+  color:white  !important;
+  transform:scale(1)  !important;
+  pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button.answerBtn:disabled:hover{
+  background-color: #F25F5C !important;
+  color:white  !important;
+  transform:scale(.7)  !important;
+}
+.card{
+  border:none;
+  border-radius:15px;
 }
 
-.App-link {
-  color: #61dafb;
+.animationBlock .card{
+  height:550px;
+  box-shadow:0px 0px 5px rgba(0,0,0,.2);
+  background-color: #1B2D4B;
 }
+
+.sentence{
+  font-size:30px;
+  color:#F87FB6;
+  font-weight:700;
+
+}
+
+.sentence span{
+  padding:30px;
+  min-width: 100px;
+  background-color:white;
+  height:30px;
+  box-shadow:0px 0px 5px rgba(0,0,0,.2);
+  display:inline-block;
+  border-radius:10px;
+  margin-left:20px;
+  margin-right:20px;
+  color:green;
+}
+
+.sentence span div{
+ margin-top:-25px;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: new-hero, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h1{
+  color:#F87FB6;
+}
+
+.btnImg{
+  height:100px;
+  display:block !important;
+  margin:0 auto;
+}
+
+.answer-box{
+  background-color:white;
+  box-shadow:0px 0px 5px rgba(0,0,0,.2);
+}
+
+.answer-box button,
+.btnGeneral{
+  background-color:#F87FB6 !important;
+  border:none !important;
+  box-shadow:0px 0px 5px rgba(0,0,0,.2);
+  color:white;
+  font-weight:700;
+  font-size:30px;
+  padding:10px 20px;
+  line-height:30px;
+  text-align:center !important;
+  font-size:700;
+  transition:.3s;
+  border-radius:10px;
+}
+.btnGeneral{
+  font-size:15px;
+}
+.redBtn{
+  background-color:#F25F5C !important;
+}
+h2{
+  color:green;
+  margin-bottom:0;
+}
+
+
+.fullScreen{
+  height:100vh;
+  width:100%;
+  position:fixed;
+  background-color:rgba(0,0,0,0.7);
+  top:0;
+  left:0;
+  z-index:100;
+}
+
+.fullScreen .card{
+  width:400px;
+}
+
+.book{
+  height:300px;
+  width: 100%;
+  transition:.3s;
+  cursor: pointer;
+  overflow:hidden;
+}
+.book img{
+  object-fit: cover;
+  width:100%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  height: 100%;
+
+}
+.book:hover{
+  transform:scale(1.1)
+}
+
 
 .question__container {
   display: flex;
-  justify-content: center;
-  align-content: space-between;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.question__container img {
+  max-height: 300px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.options {
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.bg-success {
+  padding: 50px;
+}
+
+.optionOne,
+.optionTwo {
+  margin: 20px;
+}
+
+/* .button__container {
+  display: flex;
+
+  align-content: space-around;
+  max-height: 100px;
+  width: 100px;
+  
+ */
+
+.center {
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+.backBtn{
+  background-color:black;
+  border-radius:50%;
+  color:white;
+  font-size:30px;
+  line-height:35px;
+  position:fixed;
+  top:30px;
+  right:30px;
+  height:40px;
+  width:40px;
+  text-align:center;
+  font-weight:600;
+  transition:.3s;
+  cursor: pointer;
+}
+.backBtn:hover{
+  background-color:red;
+  transform: scale(1.1);
 }

@@ -1,15 +1,27 @@
-import React from "react";
-import BookOne from "./Components/BookOne";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import React, {useState} from 'react';
+import BookOne from './BookOne/BookOne';
+import BookTwo from './BookTwo/BookTwo';
+import Interface from './Interface';
+import "./App.css";
 
 const App = () => {
-  return (
-    <>
-      <BookOne />
-    </>
-  );
-};
+  const [screenState, setScreenState] = useState(0);
 
+
+  const screenView = (value) =>{
+    setScreenState(value)
+    console.log(value);
+  }
+    
+
+  return ( 
+    <>
+       {screenState === 0 &&   <Interface screenView={screenView}/> }
+       {screenState === 1 &&   <BookOne screenView={screenView}/> }
+       {screenState === 2 &&   <BookTwo  screenView={screenView} /> } 
+    </>
+
+   );
+}
+ 
 export default App;
