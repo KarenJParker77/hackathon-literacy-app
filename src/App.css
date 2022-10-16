@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+.question__container {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

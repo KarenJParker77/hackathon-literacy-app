@@ -1,4 +1,4 @@
-import { allWords } from "../Mock data";
+import { allWords } from "../Mock data/index.js";
 
 export const initialState = {
   allWords,
